@@ -106,14 +106,14 @@ void rover_driving_move(uint16_t signal)
       }
       case MOTOR_FORWARD:
       {
-        int pwm = map(signal, RC_CENTER, RC_HIGH, 0, 100);
+        int pwm = map(signal, RC_CENTER, RC_HIGH, 0, 200);
         motors_left_2.TurnLeft(pwm);
         motors_right_2.TurnLeft(pwm);
         break;
       }
       case MOTOR_BACKWARD:
       {
-        int pwm = map(signal, RC_CENTER, RC_LOW, 0, 100);
+        int pwm = map(signal, RC_CENTER, RC_LOW, 0, 200);
         motors_left_2.TurnRight(pwm);
         motors_right_2.TurnRight(pwm);
         break;
